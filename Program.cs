@@ -15,11 +15,8 @@ class Program
 
         using (IDbConnection db = new MySqlConnection(connectionString))
         {
-            var sql2 = "INSERT INTO products (pname) VALUES (@pname)";
-
-            var p2 = new Products() { pname= "Call of Duty"};
-
-            var rowsAffected = db.Execute(sql2, p2);
+            //Methods.AddtoProducts(db);
+            Methods.DeleteProducts(db);
 
             var result = db.Query("SELECT * FROM products"); // Metoden Query kommer från Dapper
             foreach (var row in result)

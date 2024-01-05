@@ -11,13 +11,26 @@ public class Methods
         return connectionString;
     }
 
-    public void AddtoProducts(IDbConnection db)
+    static public void AddtoProducts(IDbConnection db)
     {
         var sql2 = "INSERT INTO products (pname) VALUES (@pname)";
+        Console.WriteLine("State the product:");
+        string tmp = Console.ReadLine()+"";
 
-        var p2 = new Products() { pname= "Call of Duty"};
+        var p2 = new Products() { pname= tmp};
 
         var rowsAffected = db.Execute(sql2, p2);
+    }
+
+    static public void DeleteProducts(IDbConnection db)
+    {
+        
+        Console.WriteLine("State the product id:");
+        int tmp = int.Parse(Console.ReadLine()+"");
+        var sql2 = "DELETE FROM products WHERE pid="+tmp;
+        //var p2 = new Products() { pid = tmp};
+
+        var rowsAffected = db.Execute(sql2);
     }
         
 }
