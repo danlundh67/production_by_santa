@@ -17,6 +17,7 @@ class Program
         {
             Methods.AddtoProducts(db);
             Methods.DeleteProducts(db);
+            Methods.UpdateProducts(db);
 
             var result = db.Query("SELECT * FROM products"); // Metoden Query kommer från Dapper
             foreach (var row in result)
