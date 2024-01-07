@@ -52,3 +52,6 @@ obj/Debug/net8.0/production_by_santa.GlobalUsings.g.cs
 obj/Debug/net8.0/production_by_santa.pdb
 obj/Debug/net8.0/ref/production_by_santa.dll
 obj/Debug/net8.0/refint/production_by_santa.dll
+obj/Debug/net8.0/apphost
+bin/Debug/net8.0/production_by_santa
+obj/Debug/net8.0/production_by_santa.sourcelink.json

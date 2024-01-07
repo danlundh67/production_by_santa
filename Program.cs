@@ -15,7 +15,7 @@ class Program
 
         using (IDbConnection db = new MySqlConnection(connectionString))
         {
-            //Methods.AddtoProducts(db);
+            Methods.AddtoProducts(db);
             Methods.DeleteProducts(db);
 
             var result = db.Query("SELECT * FROM products"); // Metoden Query kommer från Dapper
